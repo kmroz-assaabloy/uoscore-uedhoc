@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+ARG DEBIAN_FRONTEND=noninteractive
+WORKDIR /work
+add ./docker/install-environment.sh ./
+RUN chmod +x install-environment.sh
+RUN ./install-environment.sh

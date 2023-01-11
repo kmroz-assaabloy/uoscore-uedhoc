@@ -1,0 +1,9 @@
+FROM zephyr_sdk
+WORKDIR /work
+add ./ ./
+#CMD chmod +x ./work/docker-test-posix.sh
+#ENTRYPOINT echo $PWD
+CMD chmod +x ./docker/test-posix.sh
+ENTRYPOINT ./docker/test-posix.sh
+#ENTRYPOINT /work/docker-test-posix.sh
+#ENTRYPOINT ls -alH  test
